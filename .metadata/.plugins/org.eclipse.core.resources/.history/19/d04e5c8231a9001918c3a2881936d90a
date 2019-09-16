@@ -1,0 +1,40 @@
+package com.chinasofti.action;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.chinasofti.dao.UserDaoImpl;
+import com.chinasofti.pojo.User;
+
+/**
+ * @category 用户列表控制器
+ */
+@WebServlet("/userlist.action")
+public class UserListAction extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    public UserListAction() {
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		UserDaoImpl userDao = new UserDaoImpl();//创建数据访问对象
+		List<User> list = userDao.findUserList();
+		//将用户列表放到作用域当中
+		request.setAttribute("list", list);
+		//转发到用户列表页面
+		request.getRequestDispatcher("userlist.jsp").forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

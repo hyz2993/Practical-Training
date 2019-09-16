@@ -1,0 +1,372 @@
+!SESSION 2019-07-17 10:52:27.848 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data E:\中软实训Project_2\workspace -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-07-17 10:52:45.140
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.common.core 2 0 2019-07-17 10:53:05.248
+!MESSAGE This version of Swing Designer was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of SWT Designer was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of WindowBuilder was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of Shared was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+
+
+!ENTRY org.eclipse.epp.logging.aeri.ui 2 19 2019-07-17 10:53:06.738
+!MESSAGE Updating the index from remote failed. Version: 1.0.1.v20150913-0716
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ui.v2.AeriServer.downloadDatabase(AeriServer.java:148)
+	at org.eclipse.epp.internal.logging.aeri.ui.log.ProblemsDatabaseUpdateJob.run(ProblemsDatabaseUpdateJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 10:55:53.753
+!MESSAGE Could not auto-share project MachineLearningMRSEClient
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“MachineLearningMRSEClient”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 10:55:53.753
+!MESSAGE 提供的 SVN 信息与磁盘上“MachineLearningMRSEClient”项目的信息不相匹配。
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 10:56:04.903
+!MESSAGE Could not auto-share project MachineLearningMRServer
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“MachineLearningMRServer”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 10:56:04.904
+!MESSAGE 提供的 SVN 信息与磁盘上“MachineLearningMRServer”项目的信息不相匹配。
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 10:56:22.988
+!MESSAGE Could not auto-share project rmiclient1
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“rmiclient1”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 10:56:22.989
+!MESSAGE 提供的 SVN 信息与磁盘上“rmiclient1”项目的信息不相匹配。
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 10:56:37.657
+!MESSAGE Could not auto-share project rmiserver
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“rmiserver”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 10:56:37.657
+!MESSAGE 提供的 SVN 信息与磁盘上“rmiserver”项目的信息不相匹配。
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 10:56:48.603
+!MESSAGE Could not auto-share project rpcclient
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“rpcclient”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 10:56:48.604
+!MESSAGE 提供的 SVN 信息与磁盘上“rpcclient”项目的信息不相匹配。
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 10:57:08.531
+!MESSAGE Could not auto-share project rpcserver
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“rpcserver”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 10:57:08.531
+!MESSAGE 提供的 SVN 信息与磁盘上“rpcserver”项目的信息不相匹配。
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 10:57:21.022
+!MESSAGE Could not auto-share project SpamDeterminationWebClient
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“SpamDeterminationWebClient”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 10:57:21.022
+!MESSAGE 提供的 SVN 信息与磁盘上“SpamDeterminationWebClient”项目的信息不相匹配。
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-07-17 11:00:30.770
+!MESSAGE cacheFile=file:/E:/中软实训Project_2/workspace/.metadata/.plugins/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2019-07-17 11:00:59.904
+!MESSAGE Could not auto-share project Servers
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: 提供的 SVN 信息与磁盘上“Servers”项目的信息不相匹配。
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2019-07-17 11:00:59.904
+!MESSAGE 提供的 SVN 信息与磁盘上“Servers”项目的信息不相匹配。
+!SESSION 2019-07-18 11:30:06.888 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.891
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\com.collabnet.subversion.merge.feature_4.1.0.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.895
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\net.java.dev.jna_4.1.0.v06022015_1911.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.903
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.feature_1.10.3.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.906
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.javahl.feature_1.8.15.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.909
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.svnkit.feature_1.8.9.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.912
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse.graph.feature_1.1.1.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.915
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse.mylyn_3.0.0.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.919
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse_1.10.13.jar
+
+!ENTRY org.eclipse.update.configurator 4 0 2019-07-18 11:30:09.922
+!MESSAGE Unable to find feature.xml in directory: C:\Users\Administrator\Desktop\eclipse\features\org.tmatesoft.svnkit_1.8.12.r10533_v20160129_0158.jar
+
+!ENTRY org.eclipse.equinox.ds 2 0 2019-07-18 11:30:39.663
+!MESSAGE [SCR - WorkThread] Timeout occurred! Thread was blocked on processing [QueuedJob] WorkPerformer: org.eclipse.equinox.internal.ds.SCRManager@7435e7c5; actionType 1
+
+!ENTRY org.eclipse.equinox.ds 2 0 2019-07-18 11:30:39.670
+!MESSAGE [SCR] Enabling components of bundle org.eclipse.update.configurator did not complete in 30000 ms 
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.235
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\com.collabnet.subversion.merge.feature_4.1.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.261
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\net.java.dev.jna_4.1.0.v06022015_1911.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.272
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.feature_1.10.3.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.280
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.javahl.feature_1.8.15.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.286
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.svnkit.feature_1.8.9.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.294
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse.graph.feature_1.1.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.298
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse.mylyn_3.0.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.307
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse_1.10.13.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.312
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tmatesoft.svnkit_1.8.12.r10533_v20160129_0158.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.457
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\com.collabnet.subversion.merge.feature_4.1.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.466
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\net.java.dev.jna_4.1.0.v06022015_1911.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.471
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.feature_1.10.3.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.475
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.javahl.feature_1.8.15.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.479
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.clientadapter.svnkit.feature_1.8.9.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.483
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse.graph.feature_1.1.1.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.488
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse.mylyn_3.0.0.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.493
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tigris.subversion.subclipse_1.10.13.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2019-07-18 11:30:43.497
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\Users\Administrator\Desktop\eclipse\features\org.tmatesoft.svnkit_1.8.12.r10533_v20160129_0158.jar.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-07-18 11:36:59.983
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.common.core 2 0 2019-07-18 11:37:19.882
+!MESSAGE This version of Swing Designer was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of SWT Designer was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of WindowBuilder was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of Shared was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+
+
+!ENTRY org.eclipse.epp.logging.aeri.ui 2 19 2019-07-18 11:37:21.136
+!MESSAGE Updating the index from remote failed. Version: 1.0.1.v20150913-0716
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ui.v2.AeriServer.downloadDatabase(AeriServer.java:148)
+	at org.eclipse.epp.internal.logging.aeri.ui.log.ProblemsDatabaseUpdateJob.run(ProblemsDatabaseUpdateJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2019-07-18 11:46:17.565 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data E:\中软实训Project_2\workspace -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-07-18 11:46:23.557
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.instantiations.common.core 2 0 2019-07-18 11:46:43.879
+!MESSAGE This version of Swing Designer was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of SWT Designer was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of WindowBuilder was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+This version of Shared was compiled for Eclipse 3.5 but is running on Eclipse 3.11.
+
+
+!ENTRY org.eclipse.epp.logging.aeri.ui 2 19 2019-07-18 11:46:44.527
+!MESSAGE Updating the index from remote failed. Version: 1.0.1.v20150913-0716
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ui.v2.AeriServer.downloadDatabase(AeriServer.java:148)
+	at org.eclipse.epp.internal.logging.aeri.ui.log.ProblemsDatabaseUpdateJob.run(ProblemsDatabaseUpdateJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-07-18 12:01:01.336
+!MESSAGE Several ports (8005, 8080) required by Tomcat v8.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-07-18 12:03:40.138
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v8.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.recommenders.rcp 4 5 2019-07-18 16:39:08.142
+!MESSAGE Failed to resolve selection in ‘=SpamDeterminationWebClient/src<com.chinasofti.bd.md{DeterminationServlet.java’ at offset 1,390
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromTypeRootInEditor(JavaElementSelections.java:164)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:119)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:102)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.handleSelectionInEditor(JavaElementSelectionService.java:108)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.access$1(JavaElementSelectionService.java:105)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService$1.run(JavaElementSelectionService.java:82)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)

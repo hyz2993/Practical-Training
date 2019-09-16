@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/com/chinasofti/spamdetermination/WordInfo.java=gbk
+encoding//src/com/chinasofti/spamdetermination/rpcserver/bizimpl/SpamDeterminationBizImpl.java=GBK
+encoding//src/com/chinasofti/spamdetermination/rpcserver/bizimpl/mr/SpamDeteminationMapReduce.java=gbk
+encoding/<project>=gbk
+encoding/leanrningData=UTF-8

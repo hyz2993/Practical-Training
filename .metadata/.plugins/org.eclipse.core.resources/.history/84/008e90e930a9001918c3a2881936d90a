@@ -1,0 +1,132 @@
+package com.chinasofti.pojo;
+import java.util.Date;
+/**
+ * @author DAQ
+ * @category 鍗氬瀹炰綋绫�
+ */
+public class Blog {
+	/**
+	 * 涓婚敭
+	 */
+	private int id;
+	
+	/**
+	 * 鍗氬绫诲瀷
+	 */
+	private  String type;
+	
+	/**
+	 * 鐢ㄦ埛ID
+	 */
+	private int uid;
+	
+	/**
+	 * 鏍囬
+	 */
+	private String title;
+	
+	/**
+	 * 姒傝
+	 */
+	private String schema;
+	
+	/**
+	 * 鍐呭
+	 */
+	private String content;
+	
+	/**
+	 * 鐐瑰嚮閲�
+	 */
+	private int clicks;
+	
+	/**
+	 * 鍗氬鍒涘缓鏃堕棿
+	 */
+	private Date datetime;
+
+	public Blog() {
+		super();
+	}
+	
+	public Blog(int id, String type, int uid, String title, String schema,
+			String content, int clicks, Date datetime) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.uid = uid;
+		this.title = title;
+		this.schema = schema;
+		this.content = content;
+		this.clicks = clicks;
+		this.datetime = datetime;
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public int getUid() {
+		return uid;
+	}
+
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getSchema() {
+		return schema;
+	}
+
+	public void setSchema(String schema) {
+		this.schema = schema;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public int getClicks() {
+		return clicks;
+	}
+
+	public void setClicks(int clicks) {
+		this.clicks = clicks;
+	}
+
+	public Date getDatetime() {
+		return datetime;
+	}
+
+	public void setDatetime(Date datetime) {
+		this.datetime = datetime;
+	}
+	
+
+}
+

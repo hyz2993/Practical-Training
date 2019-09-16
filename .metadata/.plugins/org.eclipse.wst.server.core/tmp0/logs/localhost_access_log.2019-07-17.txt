@@ -1,0 +1,6 @@
+127.0.0.1 - - [17/Jul/2019:11:01:49 +0800] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [17/Jul/2019:11:01:50 +0800] "GET /SpamDeterminationWeb/msgInput.jsp HTTP/1.1" 200 369
+0:0:0:0:0:0:0:1 - - [17/Jul/2019:11:02:16 +0800] "POST /SpamDeterminationWeb/check HTTP/1.1" 500 3973
+0:0:0:0:0:0:0:1 - - [17/Jul/2019:11:11:14 +0800] "GET /SpamDeterminationWeb/msgInput.jsp HTTP/1.1" 200 369
+0:0:0:0:0:0:0:1 - - [17/Jul/2019:11:11:15 +0800] "POST /SpamDeterminationWeb/check HTTP/1.1" 404 990
+0:0:0:0:0:0:0:1 - - [17/Jul/2019:11:31:44 +0800] "GET /SpamDeterminationWeb/msgInput.jsp HTTP/1.1" 200 369

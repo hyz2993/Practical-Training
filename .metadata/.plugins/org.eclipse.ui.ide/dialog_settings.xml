@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\中软实训Project_2\workspace\SpamDeterminationWebClient"/>
+			<item value="E:\中软实训Project_2\workspace\rpcserver"/>
+			<item value="E:\中软实训Project_2\workspace\rpcclient"/>
+			<item value="E:\中软实训Project_2\workspace\rmiserver"/>
+			<item value="E:\中软实训Project_2\workspace\rmiclient1"/>
+			<item value="E:\中软实训Project_2\workspace\MachineLearningMRServer"/>
+			<item value="E:\中软实训Project_2\workspace\MachineLearningMRSEClient"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

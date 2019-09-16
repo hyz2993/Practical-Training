@@ -1,0 +1,227 @@
+package com.xauat.dao;
+
+import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+import com.xauat.pojo.User;
+
+/**
+ * @category 用户的数据访问层
+ */
+public class UserDaoImpl extends BaseDao{
+	
+	@Test
+	public void test(){
+		
+		List<User> list = this.findUserList();
+		for (User u : list) {
+			System.out.println(u.getName());
+		}
+		User user = new User("李鹏伟", "lpw");
+		
+		int i = this.save(user);
+		System.err.println(i>0?"保存成功":"保存失败");
+//		int i = this.delete(20);
+//		System.err.println(i>0?"删除成功":"删除失败");
+		
+		list = this.findUserList();
+		for (User u : list) {
+			System.out.println(u.getName());
+		}
+	}
+
+	/*
+	 * 通过用户名和密码访问数据库，查询出结果，如果正确，返回用户，否则为null
+	 */
+	public User find(String userName, String passWord) {
+		User user = null;
+		try {
+			super.regist();
+			super.connection();
+			String sql = "select * from users where name=? and pass=?";
+			super.getPst(sql);
+			pstmt.setString(1, userName);
+			pstmt.setString(2, passWord);
+			super.rs = pstmt.executeQuery();
+			while (rs.next()) {
+				user = createUser(rs);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return user;
+	}
+
+	/*
+	 * 添加用户
+	 */
+	public int save(User user) {
+		int i = 0;
+		try {
+			super.regist();
+			super.connection();
+			String sql = "insert into users (name,pass，sex,birthday,age,tel,inputdate,ip) values (?,?,?,?,?,?,?,?)";
+			super.getPst(sql);
+			pstmt.setString(1, user.getName());
+			pstmt.setString(2, user.getPw());
+			pstmt.setString(3, user.getSex());
+			pstmt.setTimestamp(4, new Timestamp(user.getBirthday().getTime()));
+			pstmt.setInt(5, user.getAge());
+			pstmt.setString(6, user.getTel());
+			//使用时间戳对象，获取事件，让数据库记录当前时间，具体到时分秒。
+			pstmt.setTimestamp(7, new Timestamp(System.currentTimeMillis()));
+			pstmt.setString(8, user.getIp());
+			i = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	/*
+	 * 添加用户详情
+	 */
+	public int saveInfo(User user) {
+		int i = 0;
+		try {
+			super.connection();
+			String sql = "insert into users (name,pass,birthday,age,sex,tel,provinceId,cityId,areaId,inputdate,ip) values (?,?,?,?,?,?,?,?,?,?,?)";
+			super.getPst(sql);
+			pstmt.setString(1, user.getName());
+			pstmt.setString(2, user.getPw());
+			pstmt.setDate(3, new Date(user.getBirthday().getTime()));
+			pstmt.setInt(4, user.getAge());
+			pstmt.setString(5, user.getSex());
+			pstmt.setString(6, user.getTel());
+			pstmt.setString(7, user.getProvinceId());
+			pstmt.setString(8, user.getCityId());
+			pstmt.setString(9, user.getAreaId());
+			pstmt.setDate(10, new Date(user.getInputdate().getTime()));
+			pstmt.setString(11, user.getIp());
+			i = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	public List<User> findUserList() {
+		List<User> list = new ArrayList<User>();
+		try {
+			super.regist();
+			super.connection();
+			String sql = "select * from users where id<>1 order by id desc";
+			super.getPst(sql);
+			rs = super.pstmt.executeQuery();
+			while (rs.next()) {
+				User user = this.createUser(rs);
+				list.add(user);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	public User find(int id) {
+		User user = null;
+		try {
+			super.connection();
+			String sql = "select id,name,pw,sex,birthday,age,tel,provinceId,cityId,areaId,inputdate,ip from users where id=?";
+			super.getPst(sql);
+			pstmt.setInt(1, id);
+			rs = super.pstmt.executeQuery();
+			while (rs.next()) {
+				user = createUser(rs);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
+	}
+
+	public int delete(int id) {
+		int i = 0;
+		try {
+			super.connection();
+			String sql = "delete from users where id = ?";
+			super.getPst(sql);
+			pstmt.setInt(1, id);
+			i = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	/*
+	 * 更新用户信息
+	 */
+	public int update(User user) {
+		int i = 0;
+		try {
+			super.connection();
+			String sql = "update users set name=?,pass=?,birthday=?,age=?,sex=?,tel=?,provinceId=?,cityId=?,areaId=? where id=?";
+			super.getPst(sql);
+			pstmt.setString(1, user.getName());
+			pstmt.setString(2, user.getPw());
+			pstmt.setDate(3, new Date(user.getBirthday().getTime()));
+			pstmt.setInt(4, user.getAge());
+			pstmt.setString(5, user.getSex());
+			pstmt.setString(6, user.getTel());
+			pstmt.setString(7, user.getProvinceId());
+			pstmt.setString(8, user.getCityId());
+			pstmt.setString(9, user.getAreaId());
+			pstmt.setInt(10, user.getId());
+			i = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	public User find(String name) {
+		User user = null;
+		try {
+			super.connection();
+			String sql = "select id,name,pass,sex,birthday,age,tel,provinceId,cityId,areaId,inputdate,ip from users where name=?";
+			super.getPst(sql);
+			pstmt.setString(1, name);
+			rs = super.pstmt.executeQuery();
+			while (rs.next()) {
+				user = createUser(rs);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
+	}
+
+	
+	/**
+	 * 创建用户对象
+	 */
+	private User createUser(ResultSet rs) throws SQLException {
+		User user = new User();
+		user.setId(rs.getInt(1));
+		user.setName(rs.getString(2));
+		user.setPw(rs.getString(3));
+		user.setSex(rs.getString(4));
+		user.setBirthday(rs.getDate(5));
+		user.setAge(rs.getInt(6));
+		user.setTel(rs.getString(7));
+		user.setProvinceId(rs.getString(8));
+		user.setCityId(rs.getString(9));
+		user.setAreaId(rs.getString(10));
+		user.setInputdate(rs.getDate(11));
+		user.setIp(rs.getString(12));
+		return user;
+	}
+}

@@ -1,0 +1,83 @@
+package com.chinasofti.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+/**
+ * @category 鏁版嵁搴撹繛鎺ュ熀绫�
+ */
+public class BaseDao {
+
+	protected Connection conn;
+	protected PreparedStatement pstmt;
+	protected ResultSet rs;
+	
+	// 鍔犺浇鏁版嵁搴撻┍鍔�
+	protected void regist() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	// 鍒涘缓鏁版嵁搴撹繛鎺�
+	protected void connection() {
+		regist();
+		try {
+			conn = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/usermanager"
+							+ "?useUnicode=true&characterEncoding=utf8",
+					"root", "root");
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	// 鍒涘缓sql璇彞
+	protected void getPst(String sql) {
+		try {
+			pstmt = conn.prepareStatement(sql);
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	// 鎵цsql杩斿洖缁撴灉闆�
+
+	// 鍏抽棴鏁版嵁搴撹繛鎺�
+	protected void close() {
+		if (rs != null) {
+			try {
+				rs.close();
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+		}
+		if (pstmt != null) {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+		}
+		if (conn != null) {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+		}
+	}
+}

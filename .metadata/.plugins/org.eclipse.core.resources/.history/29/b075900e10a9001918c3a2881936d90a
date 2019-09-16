@@ -1,0 +1,5 @@
+RedisServer=192.168.159.131
+RedisPort=6379
+RedisPassword=admin
+HdfsRoot=hdfs://192.168.159.131:9000/
+CounterServer=192.168.159.1

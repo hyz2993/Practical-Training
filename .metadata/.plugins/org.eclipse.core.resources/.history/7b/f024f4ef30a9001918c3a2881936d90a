@@ -1,0 +1,120 @@
+package com.xauat.dao;
+
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.xauat.pojo.Blog;
+import com.xauat.pojo.User;
+import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class BlogDaoImpl extends BaseDao{
+	
+	
+	
+	
+	
+	/*
+	 * 保存博客
+	 */
+	public int save(Blog blog) {
+		int i = 0;
+		try {
+			super.connection();
+			String sql = "insert into blog (id,type,uid,title,schema,content,clicks,datetime) values (?,?,?,?,?,?,?,?)";
+			super.getPst(sql);
+			pstmt.setInt(1, blog.getId());
+			pstmt.setString(2, blog.getType());
+			pstmt.setInt(3, blog.getUid());
+			pstmt.setString(4, blog.getTitle());
+			pstmt.setString(5, blog.getSchema());
+			pstmt.setString(6, blog.getContent());
+			pstmt.setInt(7, blog.getClicks());
+			pstmt.setTimestamp(8, new Timestamp(blog.getDatetime().getTime()));
+			// 使用时间戳对象，获取事件，让数据库记录当前时间，具体到时分秒。
+			i = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+	
+	
+	
+	/**
+	 * 删除个人日志
+	 */
+	public int delete(int id) {
+		int i = 0;
+		try {
+			super.connection();
+			String sql = "delete from blog where id = ?";
+			super.getPst(sql);
+			pstmt.setInt(1, id);
+			i = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+	
+	public List<Blog> findBlogList() {
+		List<Blog> list = new ArrayList<Blog>();
+		try {
+			super.connection();
+			String sql = "select * from blog where id<>1 order by id desc";
+			super.getPst(sql);
+			rs = super.pstmt.executeQuery();
+			while (rs.next()) {
+				Blog blog = this.createBlog(rs);
+				list.add(blog);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	/**
+	 * 更新访问量
+	 */
+	public int updateclicks(Blog blog) {
+		int i = 0;
+		try {
+			super.connection();
+			String sql = "update blog set clicks=? where id=?";
+			super.getPst(sql);
+			pstmt.setInt(1, blog.getClicks()+1);
+			pstmt.setInt(2, blog.getId());
+			i = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+		
+	
+	
+	/**
+	 * 创建Blog对象
+	 */
+	private Blog createBlog(ResultSet rs) throws SQLException {
+		Blog blog = new Blog();
+		blog.setId(rs.getInt(1));
+		blog.setType(rs.getString(2));
+		blog.setUid(rs.getInt(3));
+		blog.setTitle(rs.getString(4));
+		blog.setSchema(rs.getString(5));
+		blog.setContent(rs.getString(6));
+		blog.setClicks(rs.getInt(7));
+		blog.setDatetime(rs.getDate(8));
+		return blog;
+	}
+
+}
